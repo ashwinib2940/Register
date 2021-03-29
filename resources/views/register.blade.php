@@ -88,5 +88,22 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).on("keyup","#address",function(){
+        var address = $(this).val();
+        console.log(address);
+        $.ajax({
+            url:"http://register.portal/USAutocompleteExample/run",
+            dataType:'text',
+            type:"POST",
+            data: {lookup:address},
+            success: function(result){
+                console.log(result);
+		
+            }
+        })
+    });
 
+
+</script>
 @endsection

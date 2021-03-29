@@ -18,3 +18,4 @@ Route::get('/', function () {
     return view('register');
 });
 Route::post('/addcustomer','UserController@addcustomer');
+Route::post('/USAutocompleteExample/run','USAutocompleteExample@run');
